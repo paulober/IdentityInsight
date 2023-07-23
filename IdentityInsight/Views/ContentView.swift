@@ -19,11 +19,6 @@ struct ContentView: View {
                 .environmentObject(backend)
                 .edgesIgnoringSafeArea([.horizontal, .top])
             
-            WikiPagesView()
-                .tabItem {
-                    Label("More details", systemImage: "book")
-                }
-            
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")

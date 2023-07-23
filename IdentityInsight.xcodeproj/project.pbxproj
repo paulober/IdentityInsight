@@ -18,7 +18,6 @@
 		B1038BE02A699670000ABDFE /* IdentityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1038BDF2A699670000ABDFE /* IdentityDetailsView.swift */; };
 		B1038BE62A69C3FA000ABDFE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1038BE52A69C3FA000ABDFE /* SettingsView.swift */; };
 		B1038BE82A69E13B000ABDFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B1038BE72A69E13B000ABDFE /* README.md */; };
-		B1038BEA2A69E372000ABDFE /* WikiPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1038BE92A69E372000ABDFE /* WikiPagesView.swift */; };
 		B1AD488D2A6D7EFE000DBB71 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1AD488C2A6D7EFE000DBB71 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		B1038BDF2A699670000ABDFE /* IdentityDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityDetailsView.swift; sourceTree = "<group>"; };
 		B1038BE52A69C3FA000ABDFE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B1038BE72A69E13B000ABDFE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B1038BE92A69E372000ABDFE /* WikiPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPagesView.swift; sourceTree = "<group>"; };
 		B1AD488C2A6D7EFE000DBB71 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +98,6 @@
 				B1038BDD2A6995A4000ABDFE /* MapColumnView.swift */,
 				B1038BDF2A699670000ABDFE /* IdentityDetailsView.swift */,
 				B1038BE52A69C3FA000ABDFE /* SettingsView.swift */,
-				B1038BE92A69E372000ABDFE /* WikiPagesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 				B1038BD92A69914C000ABDFE /* IdentityView.swift in Sources */,
 				B1038BC32A697F61000ABDFE /* IdentityInsightApp.swift in Sources */,
 				B1038BDE2A6995A4000ABDFE /* MapColumnView.swift in Sources */,
-				B1038BEA2A69E372000ABDFE /* WikiPagesView.swift in Sources */,
 				B1038BE02A699670000ABDFE /* IdentityDetailsView.swift in Sources */,
 				B1038BDC2A699185000ABDFE /* Backend.swift in Sources */,
 			);
