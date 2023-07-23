@@ -137,14 +137,14 @@ struct IdentityDetailsView: View {
                             Button(action: {
                                 UIPasteboard.general.string = response.IP
                             }, label: {
-                                Label("Copy", systemImage: "doc.on.doc")
+                                Image(systemName: "doc.on.doc")
                             })
                         }
                         .accessibilityElement(children: .combine)
                         .listRowBackground(Color.clear)
                         
                         VStack {
-                            Text("This is what your digital address reveals to others on the internet about you.\nYou might wonder how to change or conceal it.\nHowever, you cannot alter these specific details since they are not directly sourced from you.\nYet, you have the option to change or mask your digital address (IP) as a protective measure.\nThis can be achieved through VPNs or special proxies, which function similarly to postal boxes in the physical world.\nIn many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint, even though their actual locations differ.")
+                            Text("In many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint, even though their actual locations differ.")
                         }
                         .accessibilityElement(children: .combine)
                         .listRowBackground(Color.clear)

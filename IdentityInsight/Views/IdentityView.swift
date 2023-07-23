@@ -43,8 +43,8 @@ struct IdentityView: View {
                         //.background(Color.blue)
                     
                     IdentityDetailsView()
-                        .frame(width: width75, height: height75 * detailsPortion)
-                        .alignmentGuide(.top) { d in
+                        .frame(width: width75, height: height75 * detailsPortion - 16)
+                        .alignmentGuide(.bottom) { d in
                             return d[.bottom]
                         }
                         .cornerRadius(16)
