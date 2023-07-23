@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  IdentityInsight
+//
+//  Created by Paul on 20.07.23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = 099C9A58FB01AB9052B8CBBB5AC324D8
