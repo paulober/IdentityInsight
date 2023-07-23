@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct IdentityInsightApp: App {
+    @StateObject private var historyViewModel = HistoryViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(historyViewModel)
         }
     }
 }

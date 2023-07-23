@@ -35,6 +35,12 @@ struct SettingsView: View {
                         Label("Star on GitHub", systemImage: "link")
                     })
                 }
+                
+                Section {
+                    Text("Only the data that you manually save is stored, and it is stored locally.")
+                } header: {
+                    Text("Data security")
+                }
             }
             .navigationTitle("Settings")
         }

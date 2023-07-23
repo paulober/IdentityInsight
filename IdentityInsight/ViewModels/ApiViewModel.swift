@@ -16,7 +16,7 @@ struct MyAnnotation: Identifiable {
 }
 
 @MainActor
-class Backend: ObservableObject {
+class ApiViewModel: ObservableObject {
     private let webApi: IPGeolocation = IPGeolocation(apiKey: Bundle.main.infoDictionary?["API_KEY"] as? String)
     private var cancellables = Set<AnyCancellable>()
     private var isPreview: Bool = false

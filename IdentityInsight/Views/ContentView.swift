@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var backend = Backend()
+    @StateObject private var backend = ApiViewModel()
     
     var body: some View {
         TabView {
@@ -17,6 +17,12 @@ struct ContentView: View {
                     Label("ID", systemImage: "touchid")
                 }
                 .environmentObject(backend)
+                .edgesIgnoringSafeArea([.horizontal, .top])
+            
+            HistoryView()
+                .tabItem {
+                    Label("History", systemImage: "clock.arrow.circlepath")
+                }
                 .edgesIgnoringSafeArea([.horizontal, .top])
             
             SettingsView()

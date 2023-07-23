@@ -13,14 +13,18 @@ let figureSymbolStates: [String] = ["run", "roll", "american.football", "archery
 let figureName = "figure." + (figureSymbolStates.randomElement() ?? "fishing")
 
 struct MapColumnView: View {
-    @EnvironmentObject var backend: Backend
+    @EnvironmentObject var backend: ApiViewModel
+    @EnvironmentObject var historyViewModel: HistoryViewModel
+    @State var showAlert: Bool = false
+    @State var alertError: String?
     
     var body: some View {
-        if backend.response != nil {
+        if backend.response != nil && !backend.annotations.isEmpty {
             ZStack(alignment: .bottomTrailing) {
                 // todo use UserAnnotation in 17.0+
             
                 // [Workaround] AnyView as Wrapper so no "opaque return type error" if uysing return
+                // Causes: "[SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior." error on view updates like user interacting witrh map or the button press. Unsolved by Apple...
                 Map(
                     // .constant because zoom would cause lots of "Publishing changes
                     // from within view updates is not allowed" errors
@@ -41,7 +45,27 @@ struct MapColumnView: View {
                 .disabled(true)
                 
                 Button(action: {
-                    
+                    if let lat = backend.annotations.first?.lat,
+                       let long = backend.annotations.first?.long,
+                       let provider = backend.response?.AS,
+                       let countryCode = backend.response?.countryCode {
+                        let newHistoryItem = HistoryItem(lat: lat, long: long, provider: provider, country: countryCode)
+                        if (historyViewModel.history?.items.contains(where: { $0.id == newHistoryItem.id }) ?? false) {
+                            DispatchQueue.main.async {
+                                alertError = "This location and provider is already in your history."
+                                showAlert = true
+                            }
+                            return
+                        } else {
+                            if !historyViewModel.storeNewItem(newHistoryItem) {
+                                DispatchQueue.main.async {
+                                    alertError = "Failed adding provider and location to your history."
+                                    showAlert = true
+                                }
+                                return
+                            }
+                        }
+                    }
                 }) {
                     Label("Save", systemImage: "square.and.arrow.down")
                         .tint(.orange)
@@ -49,6 +73,15 @@ struct MapColumnView: View {
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 8).fill(.ultraThinMaterial))
                 .padding(8) // Adjust the padding as needed
+            }
+            .alert("Error adding item to history", isPresented: $showAlert) {
+                Button("Ok") {
+                    DispatchQueue.main.async {
+                        showAlert = false
+                    }
+                }
+            } message: {
+                Text(alertError ?? "Unknown error")
             }
         } else {
             ProgressView()
@@ -59,8 +92,10 @@ struct MapColumnView: View {
 
 struct MapColumnView_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var backend = Backend(isPreview: true)
+        @StateObject var backend = ApiViewModel(isPreview: true)
+        @StateObject var historyViewModel = HistoryViewModel()
         MapColumnView()
             .environmentObject(backend)
+            .environmentObject(historyViewModel)
     }
 }

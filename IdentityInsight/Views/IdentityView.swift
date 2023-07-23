@@ -11,7 +11,7 @@ let backgroundImages: [String] = ["4k-nature-iphone-j5ri2ltmc5ibbuj9", "4k-natur
 let backgroundImage = backgroundImages.randomElement() ?? "4k-nature-iphone-j5ri2ltmc5ibbuj9"
 
 struct IdentityView: View {
-    @EnvironmentObject var backend: Backend
+    @EnvironmentObject var backend: ApiViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
     @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     
@@ -93,7 +93,7 @@ struct IdentityView: View {
 
 struct IdentityView_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var backend = Backend(isPreview: true)
+        @StateObject var backend = ApiViewModel(isPreview: true)
         IdentityView()
             .environmentObject(backend)
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IdentityDetailsView: View {
-    @EnvironmentObject var backend: Backend
+    @EnvironmentObject var backend: ApiViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
     @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     
@@ -157,22 +157,11 @@ struct IdentityDetailsView: View {
                 .progressViewStyle(.circular)
         }
     }
-    
-    func emojiFlag(for countryCode: String) -> String {
-        let base: UInt32 = 127397
-        var flagString = ""
-        countryCode.uppercased().unicodeScalars.forEach {
-            if let scalar = UnicodeScalar(base + $0.value) {
-                flagString.append(String(scalar))
-            }
-        }
-        return flagString
-    }
 }
 
 struct IdentityDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        @StateObject var backend = Backend(isPreview: true)
+        @StateObject var backend = ApiViewModel(isPreview: true)
         IdentityDetailsView()
             .environmentObject(backend)
     }
