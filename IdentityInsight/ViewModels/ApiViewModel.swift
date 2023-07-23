@@ -40,6 +40,16 @@ class ApiViewModel: ObservableObject {
             }
         }
         
+        if isPresentationMode() {
+            DispatchQueue.main.async {
+                let result = presentationModeResponses[getPresentationModeResponseIndex()]
+                self.response = result
+                self.coordRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: result.latitude, longitude: result.longitude), span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
+                self.annotations = [MyAnnotation(lat: result.latitude, long: result.longitude)]
+            }
+            return
+        }
+        
         webApi.lookUp(ip: nil)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in

@@ -38,8 +38,9 @@ struct MapColumnView: View {
                         Image(systemName: figureName)
                             .imageScale(.large)
                             .foregroundColor(.orange)
-                            .padding(2)
-                            .background(Circle().fill(.ultraThinMaterial))
+                            .padding(4)
+                            .background(Circle().fill(.ultraThickMaterial))
+                            .shadow(radius: 5)
                     }
                 }
                 .disabled(true)
@@ -70,9 +71,9 @@ struct MapColumnView: View {
                     Label("Save", systemImage: "square.and.arrow.down")
                         .tint(.orange)
                 }
-                .padding()
+                .padding(11)
                 .background(RoundedRectangle(cornerRadius: 8).fill(.ultraThinMaterial))
-                .padding(8) // Adjust the padding as needed
+                .padding(6)
             }
             .alert("Error adding item to history", isPresented: $showAlert) {
                 Button("Ok") {

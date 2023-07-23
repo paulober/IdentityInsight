@@ -43,7 +43,7 @@ struct IdentityView: View {
                         //.background(Color.blue)
                     
                     IdentityDetailsView()
-                        .frame(width: width75, height: height75 * detailsPortion - 16)
+                        .frame(width: width75, height: height75 * detailsPortion)
                         .alignmentGuide(.bottom) { d in
                             return d[.bottom]
                         }

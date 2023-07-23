@@ -23,6 +23,8 @@
 		B1AD48912A6D888C000DBB71 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD48902A6D888C000DBB71 /* History.swift */; };
 		B1AD48932A6D8A82000DBB71 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD48922A6D8A82000DBB71 /* HistoryViewModel.swift */; };
 		B1AD48962A6D8DFB000DBB71 /* EmojiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD48952A6D8DFB000DBB71 /* EmojiHelper.swift */; };
+		B1AD48992A6DA6C4000DBB71 /* PresentationModeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD48982A6DA6C4000DBB71 /* PresentationModeHelper.swift */; };
+		B1AD489B2A6DC203000DBB71 /* PRIVACY.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1AD489A2A6DC203000DBB71 /* PRIVACY.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		B1AD48902A6D888C000DBB71 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		B1AD48922A6D8A82000DBB71 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		B1AD48952A6D8DFB000DBB71 /* EmojiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiHelper.swift; sourceTree = "<group>"; };
+		B1AD48982A6DA6C4000DBB71 /* PresentationModeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationModeHelper.swift; sourceTree = "<group>"; };
+		B1AD489A2A6DC203000DBB71 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		B1038BB62A697F61000ABDFE = {
 			isa = PBXGroup;
 			children = (
+				B1AD489A2A6DC203000DBB71 /* PRIVACY.txt */,
 				B1AD488C2A6D7EFE000DBB71 /* LICENSE.txt */,
 				B1038BE72A69E13B000ABDFE /* README.md */,
 				B1038BC12A697F61000ABDFE /* IdentityInsight */,
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				B1AD48952A6D8DFB000DBB71 /* EmojiHelper.swift */,
+				B1AD48982A6DA6C4000DBB71 /* PresentationModeHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1AD488D2A6D7EFE000DBB71 /* LICENSE.txt in Resources */,
+				B1AD489B2A6DC203000DBB71 /* PRIVACY.txt in Resources */,
 				B1038BE82A69E13B000ABDFE /* README.md in Resources */,
 				B1038BCA2A697F62000ABDFE /* Preview Assets.xcassets in Resources */,
 				B1038BC72A697F62000ABDFE /* Assets.xcassets in Resources */,
@@ -211,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AD48992A6DA6C4000DBB71 /* PresentationModeHelper.swift in Sources */,
 				B1AD48962A6D8DFB000DBB71 /* EmojiHelper.swift in Sources */,
 				B1038BC52A697F61000ABDFE /* ContentView.swift in Sources */,
 				B1AD48912A6D888C000DBB71 /* History.swift in Sources */,
@@ -351,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = IdentityInsight/IdentityInsight.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 417;
 				DEVELOPMENT_ASSET_PATHS = "\"IdentityInsight/Preview Content\"";
 				DEVELOPMENT_TEAM = T6Y826PCAK;
 				ENABLE_PREVIEWS = YES;
@@ -385,7 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = IdentityInsight/IdentityInsight.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 417;
 				DEVELOPMENT_ASSET_PATHS = "\"IdentityInsight/Preview Content\"";
 				DEVELOPMENT_TEAM = T6Y826PCAK;
 				ENABLE_PREVIEWS = YES;

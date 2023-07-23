@@ -1,0 +1,1 @@
+Only the data that you manually save is stored, and it is stored only locally.

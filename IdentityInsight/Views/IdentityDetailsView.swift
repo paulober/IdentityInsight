@@ -11,6 +11,7 @@ struct IdentityDetailsView: View {
     @EnvironmentObject var backend: ApiViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
     @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+    @State var isExplanationExpanded = false
     
     var body: some View {
         if let response = backend.response {
@@ -75,8 +76,12 @@ struct IdentityDetailsView: View {
                         .accessibilityElement(children: .combine)
                         .listRowBackground(Color.clear)
                         
-                        VStack {
-                            Text("In many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint (but with a different IP address), even though their actual locations differ.")
+                        DisclosureGroup(isExpanded: $isExplanationExpanded) {
+                            VStack {
+                                Text("In many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint (but with a different IP address), even though their actual locations differ.")
+                            }
+                        } label: {
+                            Text("Explanation")
                         }
                         .accessibilityElement(children: .combine)
                         .listRowBackground(Color.clear)
