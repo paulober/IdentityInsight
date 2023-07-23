@@ -16,6 +16,12 @@ The app falls under the educational category, raising awareness about the signif
 
 The app has a user-friendly interface with a modern and approachable design. The use of animations and illustrations can make complex concepts more engaging and easier to understand.
 
+### Compile on your own
+
+- Clone the repo
+- Open in Xcode 13
+- Hit run (Cmd+R)
+
 ### Attributions
 
 Identity Insight is using IP2Location.io [IP geolocation](https://www.ip2location.io) web service.

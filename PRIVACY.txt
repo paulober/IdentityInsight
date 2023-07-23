@@ -1,1 +1,3 @@
 Only the data that you manually save is stored, and it is stored only locally.
+
+The app uses ip2location.io web api for IP details. Find their privacy policy here: https://www.ip2location.io/privacy-policy
