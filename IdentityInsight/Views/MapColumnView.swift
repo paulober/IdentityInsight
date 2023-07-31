@@ -53,14 +53,14 @@ struct MapColumnView: View {
                         let newHistoryItem = HistoryItem(lat: lat, long: long, provider: provider, country: countryCode)
                         if (historyViewModel.history?.items.contains(where: { $0.id == newHistoryItem.id }) ?? false) {
                             DispatchQueue.main.async {
-                                alertError = "This location and provider is already in your history."
+                                alertError = NSLocalizedString("ERRORS_LOCATION_ALREADY_IN_HISTORY", comment: "")
                                 showAlert = true
                             }
                             return
                         } else {
                             if !historyViewModel.storeNewItem(newHistoryItem) {
                                 DispatchQueue.main.async {
-                                    alertError = "Failed adding provider and location to your history."
+                                    alertError = NSLocalizedString("ERRORS_ADD_LOCATION_FAILED", comment: "")
                                     showAlert = true
                                 }
                                 return
@@ -68,7 +68,7 @@ struct MapColumnView: View {
                         }
                     }
                 }) {
-                    Label("Save", systemImage: "square.and.arrow.down")
+                    Label(NSLocalizedString("MAP_COLUMN_VIEW_SAVE_BUTTON", comment: ""), systemImage: "square.and.arrow.down")
                         .tint(.orange)
                 }
                 .padding(11)

@@ -20,7 +20,7 @@ struct IdentityDetailsView: View {
                 VStack {
                     List {
                         HStack {
-                            Text("Country:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_COUNTRY", comment: ""))
                             Spacer()
                             Text(emojiFlag(for: response.countryCode))
                         }
@@ -28,7 +28,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         HStack {
-                            Text("Region:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_REGION", comment: ""))
                             Spacer()
                             VStack {
                                 HStack {
@@ -47,7 +47,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         HStack {
-                            Text("Timezone:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_TIMEZONE", comment: ""))
                             Spacer()
                             Text("UTC\(response.timeZone)")
                         }
@@ -55,7 +55,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         HStack {
-                            Text("Provider:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_PROVIDER", comment: ""))
                             Spacer()
                             Text(response.AS == "" ? response.asn : response.AS)
                         }
@@ -78,10 +78,10 @@ struct IdentityDetailsView: View {
                         
                         DisclosureGroup(isExpanded: $isExplanationExpanded) {
                             VStack {
-                                Text("In many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint (but with a different IP address), even though their actual locations differ.")
+                                Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_EXPLANATION", comment: ""))
                             }
                         } label: {
-                            Text("Explanation")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_EXPLANATION", comment: ""))
                         }
                         .accessibilityElement(children: .combine)
                         .listRowBackground(Color.clear)
@@ -94,7 +94,7 @@ struct IdentityDetailsView: View {
                 HStack {
                     List {
                         HStack {
-                            Text("Country:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_COUNTRY", comment: ""))
                             Spacer()
                             Text(emojiFlag(for: response.countryCode))
                         }
@@ -102,7 +102,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         HStack {
-                            Text("Region:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_REGION", comment: ""))
                             Spacer()
                             VStack {
                                 HStack {
@@ -119,7 +119,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         HStack {
-                            Text("Timezone:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_TIMEZONE", comment: ""))
                             Spacer()
                             Text("UTC\(response.timeZone)")
                         }
@@ -127,7 +127,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         HStack {
-                            Text("Provider:")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_LABEL_PROVIDER", comment: ""))
                             Spacer()
                             Text(response.AS == "" ? response.asn : response.AS)
                         }
@@ -149,7 +149,7 @@ struct IdentityDetailsView: View {
                         .listRowBackground(Color.clear)
                         
                         VStack {
-                            Text("In many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint, even though their actual locations differ.")
+                            Text(NSLocalizedString("IDENTITY_DETAILS_VIEW_EXPLANATION", comment: ""))
                         }
                         .accessibilityElement(children: .combine)
                         .listRowBackground(Color.clear)

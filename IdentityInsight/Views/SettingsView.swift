@@ -12,7 +12,7 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
-                    Text("Identity Insight is using IP2Location.io ") +
+                    Text(NSLocalizedString("SETTINGS_TECH_STACK_CREDIT_PREFIX", comment: "")) +
                     Text((try! AttributedString(markdown: "[IP geolocation](https://www.ip2location.io)"))) +
                     Text(" web service.")
                 } header: {
@@ -37,9 +37,9 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    Text("Only the data that you manually save is stored, and it is stored locally.")
+                    Text(NSLocalizedString("SETTINGS_PRIVACY_CONTENT", comment: ""))
                 } header: {
-                    Text("Data security")
+                    Text(NSLocalizedString("SETTINGS_PRIVACY_LABEL", comment: ""))
                 }
             }
             .navigationTitle("Settings")

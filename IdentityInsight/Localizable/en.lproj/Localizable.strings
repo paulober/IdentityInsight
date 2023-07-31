@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  IdentityInsight
+
+  Created by Paul on 30.07.23.
+  
+*/
+
+"MAIN_TAB_VIEW_ITEM_ID" = "ID";
+"MAIN_TAB_VIEW_ITEM_HISTORY" = "History";
+"MAIN_TAB_VIEW_ITEM_SETTINGS" = "Settings";
+
+// IdentityDetailsView
+"IDENTITY_DETAILS_VIEW_LABEL_COUNTRY" = "Country:";
+"IDENTITY_DETAILS_VIEW_LABEL_REGION" = "Region:";
+"IDENTITY_DETAILS_VIEW_LABEL_TIMEZONE" = "Timezone:";
+"IDENTITY_DETAILS_VIEW_LABEL_PROVIDER" = "Provider:";
+"IDENTITY_DETAILS_VIEW_LABEL_EXPLANATION" = "Explanation:";
+"IDENTITY_DETAILS_VIEW_EXPLANATION" = "In many regions, it's common for the location displayed to be approximately 10 to 50 kilometers or more away from your actual physical location.\nThis happens because the location shown is where your traffic exits your internet provider's network.\nConsequently, many others in your area will share a similar digital address fingerprint (but with a different IP address), even though their actual locations differ.";
+
+// MapColumnView
+"MAP_COLUMN_VIEW_SAVE_BUTTON" = "Save";
+
+// HistoryView
+"HISTORY_VIEW_NO_HISTORY" = "No history available.";
+
+// SettingsView
+"SETTINGS_TECH_STACK_CREDIT_PREFIX" = "Identity Insight is using IP2Location.io ";
+"SETTINGS_PRIVACY_LABEL" = "Data security";
+"SETTINGS_PRIVACY_CONTENT" = "Only the data that you manually save is stored, and it is stored locally.";
+
+// errors
+"ERRORS_LOCATION_ALREADY_IN_HISTORY" = "This location and provider is already in your history.";
+"ERRORS_ADD_LOCATION_FAILED" = "Failed adding provider and location to your history.";

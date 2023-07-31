@@ -14,20 +14,20 @@ struct ContentView: View {
         TabView {
             IdentityView()
                 .tabItem {
-                    Label("ID", systemImage: "touchid")
+                    Label(NSLocalizedString("MAIN_TAB_VIEW_ITEM_ID", comment: ""), systemImage: "touchid")
                 }
                 .environmentObject(backend)
                 .edgesIgnoringSafeArea([.horizontal, .top])
             
             HistoryView()
                 .tabItem {
-                    Label("History", systemImage: "clock.arrow.circlepath")
+                    Label(NSLocalizedString("MAIN_TAB_VIEW_ITEM_HISTORY", comment: ""), systemImage: "clock.arrow.circlepath")
                 }
                 .edgesIgnoringSafeArea([.horizontal, .top])
             
             SettingsView()
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label(NSLocalizedString("MAIN_TAB_VIEW_ITEM_SETTINGS", comment: ""), systemImage: "gear")
                 }
         }
         .onAppear {
