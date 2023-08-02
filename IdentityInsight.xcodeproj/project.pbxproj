@@ -26,6 +26,7 @@
 		B1AD48992A6DA6C4000DBB71 /* PresentationModeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AD48982A6DA6C4000DBB71 /* PresentationModeHelper.swift */; };
 		B1AD489B2A6DC203000DBB71 /* PRIVACY.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1AD489A2A6DC203000DBB71 /* PRIVACY.txt */; };
 		B1D17B452A766E8B00A28A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1D17B472A766E8B00A28A77 /* Localizable.strings */; };
+		B1E569B22A7A5C3E0055A826 /* PRIVACY_DE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B1E569B12A7A5C3E0055A826 /* PRIVACY_DE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		B1AD489A2A6DC203000DBB71 /* PRIVACY.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY.txt; sourceTree = "<group>"; };
 		B1D17B462A766E8B00A28A77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B1D17B482A766EDE00A28A77 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1E569B12A7A5C3E0055A826 /* PRIVACY_DE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PRIVACY_DE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		B1038BB62A697F61000ABDFE = {
 			isa = PBXGroup;
 			children = (
+				B1E569B12A7A5C3E0055A826 /* PRIVACY_DE.txt */,
 				B1AD489A2A6DC203000DBB71 /* PRIVACY.txt */,
 				B1AD488C2A6D7EFE000DBB71 /* LICENSE.txt */,
 				B1038BE72A69E13B000ABDFE /* README.md */,
@@ -219,6 +222,7 @@
 				B1D17B452A766E8B00A28A77 /* Localizable.strings in Resources */,
 				B1AD489B2A6DC203000DBB71 /* PRIVACY.txt in Resources */,
 				B1038BE82A69E13B000ABDFE /* README.md in Resources */,
+				B1E569B22A7A5C3E0055A826 /* PRIVACY_DE.txt in Resources */,
 				B1038BCA2A697F62000ABDFE /* Preview Assets.xcassets in Resources */,
 				B1038BC72A697F62000ABDFE /* Assets.xcassets in Resources */,
 			);

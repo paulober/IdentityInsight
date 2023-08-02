@@ -1,0 +1,3 @@
+Nur die Daten, die Sie manuell speichern, werden gespeichert, und zwar nur lokal.
+
+Die App verwendet ip2location.io web api für IP-Details. Die Datenschutzbestimmungen finden Sie hier: https://www.ip2location.io/privacy-policy
